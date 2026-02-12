@@ -980,6 +980,120 @@ body {
     color: var(--danger);
 }
 
+/* Calendar */
+.calendar-container {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-controls button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.calendar-controls button:hover {
+    background: var(--secondary);
+    transform: scale(1.1);
+}
+
+#calendarMonth {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calendar-header {
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.calendar-day {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.calendar-day:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+.calendar-day.empty {
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+
+.calendar-day.empty:hover {
+    transform: none;
+    box-shadow: none;
+    border: none;
+}
+
+.calendar-day.profit {
+    border-color: var(--success);
+    background: rgba(var(--success-rgb), 0.05);
+}
+
+.calendar-day.loss {
+    border-color: var(--danger);
+    background: rgba(var(--danger-rgb), 0.05);
+}
+
+.calendar-date {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.calendar-pnl {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.calendar-trades {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
 /* ===== COMMUNITY PAGE ===== */
 .community-grid {
     display: grid;
